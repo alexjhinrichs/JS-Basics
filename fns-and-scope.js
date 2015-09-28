@@ -6,7 +6,15 @@ var name = 'Tyler';
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 
   //Code Here
+function isTyler() {
+	if (name === "Tyler") {
+		return true;
+	} else {
+		return false;
+	}
+}
 
+isTyler();
 
 //Next problem
 
@@ -16,8 +24,12 @@ var name = 'Tyler';
 
 
   //Code Here
+var getName = function() {
+	var name = prompt("What is your name?");
+		console.log(name);
+}
 
-
+getName();
 //Next Problem
 
 
@@ -26,6 +38,16 @@ var name = 'Tyler';
 //then alerts "Welcome, " plus whatever the users name is.
 
   //Code Here
+
+var getName = function() {
+  var name = prompt("What is your name?");
+    function welcome() {
+      getName();
+  }
+    alert("Welcome, " + name);
+}
+
+getName();
 
 
 //Next problem
@@ -38,6 +60,8 @@ var name = 'Tyler';
   //Answer Here
 
 
+//A parameter is a placeholder in a function. It is a name that is part of the functions definition. Arguments are the real values that are passed to the function and take the place of the parameter. 
+
 //Next problem
 
 
@@ -47,7 +71,7 @@ var name = 'Tyler';
 
   //Answer Here
 
-
+// Falsy values are as follows: if (false), if (null), if (undefined), if (0), if (NaN), if (''). You can check if something is falsy if the value is not truthy ie. !truthy. 
 
 //Next Problem
 
@@ -56,14 +80,16 @@ var name = 'Tyler';
 //Create a function called myName that returns your name
 
   //Code Here
-
+function myName() {
+  return "Alex";
+}
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
-
+var newMyName = myName();
 //Now alert the result of invoking newMyName
 
-
+alert(newMyName);
 
 //Next problem
 
@@ -72,9 +98,16 @@ var name = 'Tyler';
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
-
+function outerFn() {
+  var x = function() {
+    return "Alex";
+  }
+  return x;
+}
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
-
+var innerFn = outerFn();
 //Now invoke innerFn.
+
+innerFn;
